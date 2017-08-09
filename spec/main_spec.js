@@ -12,7 +12,7 @@ var main = require("../lib/main.js");
 describe("99 bottles of beer on the wall测试", function(){
     sinon.spy(console, 'log');
 
-    it("last part测试", function(){
+    it("0 bottle 测试", function(){
 
         var result = main(0);
         var expect_string = 'No more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.';
@@ -20,7 +20,7 @@ describe("99 bottles of beer on the wall测试", function(){
         expect(expect_string).to.equal(result);
     });
 
-    it("full part测试", function(){
+    it("3 bottles 测试", function(){
 
         var result = main(3);
         var expect_string = '3 bottles of beer on the wall, 3 bottles of beer.\n'+
