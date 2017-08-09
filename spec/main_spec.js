@@ -20,6 +20,28 @@ describe("99 bottles of beer on the wall测试", function(){
         expect(expect_string).to.equal(result);
     });
 
+    it("1 bottle 测试", function(){
+
+        var result = main(1);
+        var expect_string = '1 bottle of beer on the wall, 1 bottle of beer.\n'+
+            'Take one down and pass it around, no more bottles of beer on the wall.\n'+
+            'No more bottles of beer on the wall, no more bottles of beer.\n' +
+            'Go to the store and buy some more, 99 bottles of beer on the wall.';
+        expect(expect_string).to.equal(result);
+    });
+
+    it("2 bottles 测试", function(){
+
+        var result = main(2);
+        var expect_string = '2 bottles of beer on the wall, 2 bottles of beer.\n'+
+            'Take one down and pass it around, 1 bottle of beer on the wall.\n'+
+            '1 bottle of beer on the wall, 1 bottle of beer.\n'+
+            'Take one down and pass it around, no more bottles of beer on the wall.\n'+
+            'No more bottles of beer on the wall, no more bottles of beer.\n' +
+            'Go to the store and buy some more, 99 bottles of beer on the wall.';
+        expect(expect_string).to.equal(result);
+    });
+
     it("3 bottles 测试", function(){
 
         var result = main(3);
